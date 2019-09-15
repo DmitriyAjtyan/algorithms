@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	linked "algorithms/go/linked"
+	"fmt"
+)
 
 var (
 	list [8]int
@@ -31,6 +34,7 @@ func main() {
 	for i := 0; i < len(list); i++ {
 		list[i] = i
 	}
-	item = 0
+	item = 5
 	fmt.Print("\nbinary search result: ", binarySearch(list, item), "\n")
+	linked.List()
 }
