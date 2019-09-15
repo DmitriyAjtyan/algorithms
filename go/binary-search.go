@@ -1,7 +1,7 @@
 package main
 
 import (
-	linked "algorithms/go/linked"
+	str "algorithms/go/structures"
 	"fmt"
 )
 
@@ -36,5 +36,10 @@ func main() {
 	}
 	item = 5
 	fmt.Print("\nbinary search result: ", binarySearch(list, item), "\n")
-	linked.List()
+	test := str.CreateLinkedList("test")
+	test.AddItemToList(0)
+	test.AddItemToList(1)
+	test.AddItemToList(2)
+	test.GetLinkedList()
+	test.GetElementOfList(3)
 }
