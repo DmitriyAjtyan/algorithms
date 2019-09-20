@@ -1,6 +1,8 @@
 package structures
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // ListNode is implementation of linked list node
 type ListNode struct {
@@ -13,14 +15,6 @@ type LinkedList struct {
 	Name     string
 	HeadNode *ListNode
 	LastNode *ListNode
-}
-
-// array is implementation of array data structure
-type array struct {
-	firstItem  int
-	secondItem int
-	thirdItem  int
-	fourthItem int
 }
 
 // CreateLinkedList is implementation of linked list data structure
