@@ -24,24 +24,30 @@ func CreateLinkedList(name string) *LinkedList {
 	}
 }
 
-// AddItemToList is implementation of adding new item to linked list
-func (list *LinkedList) AddItemToList(data int) {
+//PushItemToList is implementation of adding new item to linked list
+func (list *LinkedList) PushItemToList(data int) {
 	item := &ListNode{
 		Data: data,
 	}
 	if list.HeadNode == nil {
 		list.HeadNode = item
+		list.LastNode = list.HeadNode
 	} else {
-		currentNode := list.HeadNode
-		for currentNode.NextNode != nil {
-			currentNode = currentNode.NextNode
+		list.LastNode = item
+		if list.HeadNode.NextNode == nil {
+			list.HeadNode.NextNode = list.LastNode
+		} else {
+			currentNode := list.HeadNode
+			for currentNode.NextNode != nil {
+				currentNode = currentNode.NextNode
+			}
+			currentNode.NextNode = list.LastNode
 		}
-		currentNode.NextNode = item
 	}
 }
 
 // GetLinkedList is implementation of getting all linked list
-func (list *LinkedList) GetLinkedList() {
+func GetLinkedList(list *LinkedList) {
 	currentNode := list.HeadNode
 	if currentNode == nil {
 		fmt.Print("\n Linked list is empty")
