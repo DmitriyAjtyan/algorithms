@@ -5,14 +5,14 @@ import (
 	"fmt"
 )
 
-// PushToStack implements adding new item to stack
+// PushToStack is implementation of adding new item to stack
 func PushToStack(stack str.LinkedList, newData int) {
 	fmt.Print("\n stack last node before push: ", stack.LastNode)
 	stack.PushItemToList(newData)
 	fmt.Print("\n stack last node after push: ", stack.LastNode)
 }
 
-// PopFromStack implements removing last added item from stack
+// PopFromStack is implementation of removing last added item from stack
 func PopFromStack(stack *str.LinkedList) {
 	fmt.Print("\n stack last node before pop: ", stack.LastNode)
 	currentNode := stack.HeadNode
@@ -26,6 +26,7 @@ func PopFromStack(stack *str.LinkedList) {
 }
 
 func main() {
+	// linked list stack test
 	newStack := str.CreateLinkedList("newStack")
 	newStack.PushItemToList(1)
 	newStack.PushItemToList(2)
